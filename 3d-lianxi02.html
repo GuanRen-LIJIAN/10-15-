@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .left{
+            float: left;
+        }
+        .box{         
+            margin: 150px auto;
+             /* 透视写在父盒子上 */
+             perspective: 300px;
+           
+        }
+        .section{
+            width: 150px;
+            height: 60px;
+            position: relative;      
+            transition: all .6s;
+            margin: 10px;
+          
+            transform-style: preserve-3d;
+        }
+        .top{
+            width: 100%;
+            height: 100%;
+            background-color: pink;
+            position:absolute;
+            top: 0px;
+            left: 0px;
+            text-align: center;
+            line-height: 60px;
+            z-index: 1;
+            transform: translateZ(30px);
+        }
+        .bottom{
+            width: 100%;
+            height: 100%;
+            background-color: purple;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            text-align: center;
+            line-height: 60px;
+            transform: translateY(30px) rotateX(-90deg); 
+        }
+       
+         .section:hover{
+            transform: rotateX(90deg);
+        } 
+    </style>
+</head>
+<body>
+  <div class="box">
+      <div class="section left">
+          <div class="top">天青色等烟雨</div>
+          <div class="bottom">而我在等你</div>
+      </div>
+      <div class="section left">
+        <div class="top">天青色等烟雨</div>
+        <div class="bottom">而我在等你</div>
+      </div>
+      <div class="section left">
+        <div class="top">天青色等烟雨</div>
+        <div class="bottom">而我在等你</div>
+      </div>
+      <div class="section left">
+        <div class="top">天青色等烟雨</div>
+        <div class="bottom">而我在等你</div>
+      </div>
+  </div>
+</body>
+</html>
